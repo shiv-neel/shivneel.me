@@ -4,41 +4,36 @@ import { motion } from 'framer-motion'
 import { BsHouseFill, BsFillLightbulbFill } from 'react-icons/bs'
 import { MdContactPage } from 'react-icons/md'
 import Logo from '../Logo'
+import { SidebarProps } from './Sidebar'
 
-export interface SidebarProps {
-	pageIndex: number
-	setPageIndex: React.Dispatch<React.SetStateAction<number>>
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ pageIndex, setPageIndex }) => {
-	const offsets = [10, 58, 106]
+const MobileNavbar: React.FC<SidebarProps> = ({ pageIndex, setPageIndex }) => {
+	const offsets = [12, 64, 116]
 	return (
-		<Box className='lg:mr-12 mr-6 flex flex-col gap-3 xl:ml-60'>
-			<Box className='flex justify-center'>
-				<Logo />
-			</Box>
-			<motion.div animate={{ y: offsets[pageIndex] }}>
+		<Box className='flex gap-3 w-1/6 ml-6 mb-12 -mt-24'>
+			<motion.div animate={{ x: offsets[pageIndex] }}>
 				<Box
-					className='w-40 h-10 p-2 rounded-md cursor-pointer absolute z-1'
+					className='w-10 h-10 p-2 rounded-md cursor-pointer absolute z-1'
 					bgColor='#000000'
 				></Box>
 			</motion.div>
 			<MenuOption
 				pageIndex={0}
 				setPageIndex={setPageIndex}
-				icon={<BsHouseFill className='bg-transparent text-white' />}
+				icon={<BsHouseFill className='bg-transparent text-white text-2xl' />}
 				text='Home'
 			/>
 			<MenuOption
 				pageIndex={1}
 				setPageIndex={setPageIndex}
-				icon={<BsFillLightbulbFill className='bg-transparent text-white' />}
+				icon={
+					<BsFillLightbulbFill className='bg-transparent text-white text-2xl' />
+				}
 				text='About'
 			/>
 			<MenuOption
 				pageIndex={2}
 				setPageIndex={setPageIndex}
-				icon={<MdContactPage className='bg-transparent text-white' />}
+				icon={<MdContactPage className='bg-transparent text-white text-2xl' />}
 				text='Resume'
 			/>
 		</Box>
@@ -54,7 +49,6 @@ const MenuOption: React.FC<MenuOptionProps> = ({
 	pageIndex,
 	setPageIndex,
 	icon,
-	text,
 }) => {
 	return (
 		<Box
@@ -62,8 +56,7 @@ const MenuOption: React.FC<MenuOptionProps> = ({
 			onClick={() => setPageIndex(pageIndex)}
 		>
 			{icon}
-			<p className='text-sm bg-transparent'>{text}</p>
 		</Box>
 	)
 }
-export default Sidebar
+export default MobileNavbar
