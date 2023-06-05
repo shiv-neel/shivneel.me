@@ -26,7 +26,7 @@ const About = () => {
 					future in which vehicles are 100% safe for us tomorrow, and
 					sustainable for our grandchildren the day after. While many may
 					dismiss this vision as naive optimism, I would argue that we are
-					already witnessing the beginnings of this vision's manifestation.
+					already witnessing the beginnings of this vision&apos;s manifestation.
 					<br />
 					<br />
 					Automakers are developing autonomous vehicles with more rational
