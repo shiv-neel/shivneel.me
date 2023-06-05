@@ -9,7 +9,7 @@ import MobileNavbar from '../sidebar/MobileNavbar'
 const Layout = ({ children }: any) => {
 	const [pageIndex, setPageIndex] = useState(0)
 	const pageIndexMap = [<Home key={0} />, <About key={1} />, <Resume key={2} />]
-
+	if (typeof window == undefined) return <></>
 	const getWidth = () => window.innerWidth
 	const [width, setWidth] = useState(getWidth())
 
