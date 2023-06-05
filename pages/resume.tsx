@@ -55,7 +55,7 @@ const Resume = () => {
 										Practitioner
 									</li>
 									<li>
-										<strong>Honors:</strong> Summa Cum Laude, Dean's List
+										<strong>Honors:</strong> Summa Cum Laude, Dean&apos;s List
 									</li>
 								</>
 							</p>
