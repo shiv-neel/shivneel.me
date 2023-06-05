@@ -26,7 +26,7 @@ export default function Home() {
 			<Box className=''>
 				<Box className='flex text-4xl space-x-10 mt-16 items-center'>
 					<Link href='https://github.com/shiv-neel' target='_blank'>
-						<BsGithub className='hover:scale-110 hover:cursor-pointer duration-100' />
+						<BsGithub className='hover:scale-110 hover:cursor-pointer duration-100 text-green-500' />
 					</Link>
 					<Link
 						href='https://www.linkedin.com/in/shiva-neelakantan/'
@@ -36,12 +36,6 @@ export default function Home() {
 					</Link>
 					<Link href='mailto:shiv.neel1622@gmail.com'>
 						<SiGmail className='hover:scale-110 hover:cursor-pointer duration-100 text-red-500' />
-					</Link>
-					<Link
-						href='https://open.spotify.com/user/o05eru4383ix2rhufv8kgxsah?si=4891daaad8a54f2c'
-						target='_blank'
-					>
-						<BsSpotify className='hover:scale-110 hover:cursor-pointer duration-100 bg-black rounded-full text-green-500' />
 					</Link>
 				</Box>
 			</Box>

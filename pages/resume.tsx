@@ -26,7 +26,8 @@ const Resume = () => {
 				</Link>
 				<Box>
 					<Box className='mt-10'>
-						<p className='text-3xl my-10 font-bold'>Education</p>
+						<p className='text-3xl mt-10 font-bold'>Education</p>
+						<Divider className='my-5' />
 						<Box>
 							<Box className='flex items-center gap-10 w-full'>
 								<p className='text-2xl font-semibold mb-5'>
@@ -62,7 +63,8 @@ const Resume = () => {
 						</Box>
 					</Box>
 					<Box>
-						<p className='text-3xl my-10 font-bold'>Experience</p>
+						<p className='text-3xl mt-10 font-bold'>Experience</p>
+						<Divider className='my-5' />
 						<Box>
 							{experienceData.map((xp, index) => (
 								<ExperienceCard key={index} {...xp} />

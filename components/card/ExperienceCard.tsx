@@ -40,7 +40,7 @@ const ExperienceCard: React.FC<ExperienceCardType> = ({
 	}
 
 	return (
-		<Box>
+		<Box className='mb-8'>
 			<Box className='flex items-center gap-10 w-full'>
 				<p className='text-2xl font-semibold mb-5'>{title}</p>
 			</Box>
@@ -64,7 +64,6 @@ const ExperienceCard: React.FC<ExperienceCardType> = ({
 					</Badge>
 				))}
 			</Box>
-			<Divider my={8} />
 		</Box>
 	)
 }
